@@ -1,0 +1,21 @@
+syntax="proto3";
+
+message Tacka {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message Trougao {
+    Tacka A = 1;
+    Tacka B = 2;
+    Tacka C = 3;
+}
+
+message ParametriTrougla {
+    float obim = 1;
+    float povrsina = 2;
+}
+
+service RacunanjeTrougla {
+    rpc IzracunajTrougao(Trougao) returns (ParametriTrougla) {}
+}
